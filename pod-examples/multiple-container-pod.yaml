@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multiple-cont-pod
+spec:
+  containers:
+  - name: first-nginx
+    image: nginx
+    ports:
+    - containerPort: 80
+  - name: second-nginx
+    image: nginx
+    ports:
+    - containerPort: 8080
+
+ 
