@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: initcont-pod
+  labels:
+    type: initlipod
+spec:
+  containers:
+  - name: simple-nginx
+    image: nginx
+    ports:
+    - containerPort: 80
