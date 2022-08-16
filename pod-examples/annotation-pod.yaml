@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: annot-pod
+  annotations:
+    creater: serhat
+spec:
+  containers:
+  - name: nginx-cont
+    image: nginx:latest
+    ports:
+    - containerPort: 80
