@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: firstdeployment
+  labels:
+    team: dev
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: coreapps
+  template:
+    metadata: 
+      labels:
+        app: coreapps
+    spec:
+      containers:
+      - name: nginxcont
+        image: nginx:latest
+        ports:
+        - containerPort: 80
